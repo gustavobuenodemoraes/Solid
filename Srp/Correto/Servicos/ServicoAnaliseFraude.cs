@@ -12,23 +12,3 @@ public class ServicoAnaliseFraude : IServicoAnaliseFraude
         return Task.FromResult(depositoInicial > 0);
     }
 }
-
-public class RepositorioContaSql : IRepositorioConta
-{
-    public Task SalvarContaAsync(string nome, string email, Cpf cpf, decimal depositoInicial)
-    {
-        // Responsabilidade única: persistência no banco de dados
-        Console.WriteLine($"[Banco de Dados] Conta de {nome} (CPF: {cpf.Valor}) salva com sucesso.");
-        return Task.CompletedTask;
-    }
-}
-
-public class ServicoNotificacaoEmail : IServicoNotificacao
-{
-    public Task EnviarEmailBoasVindasAsync(string email, string nome)
-    {
-        // Responsabilidade única: comunicação e notificação
-        Console.WriteLine($"[Notificação] E-mail de boas-vindas enviado para {email}.");
-        return Task.CompletedTask;
-    }
-}

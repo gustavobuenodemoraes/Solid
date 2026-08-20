@@ -42,4 +42,10 @@ foreach (var pedido in pedidos)
     Console.WriteLine($"-> Status: {(resultado.Sucesso ? "Sucesso" : "Falha")} | Detalhe: {resultado.Mensagem}\n");
 }
 
+var pedidoBoleto = new Pedido(Guid.NewGuid(), 150.00m, TipoPagamento.Boleto);
+
+var resultadoBoleto = await processadorCorreto.ProcessarAsync(pedidoBoleto);
+
+Console.WriteLine($"-> Status: {(resultadoBoleto.Sucesso ? "Sucesso" : "Falha")} | Detalhe: {resultadoBoleto.Mensagem}\n");
+
 Console.WriteLine("Processamento de todas as estratégias concluído!");
