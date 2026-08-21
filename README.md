@@ -64,3 +64,21 @@ Repositório prático para estudo, consulta e demonstração técnica dos princ�
 | **Granularidade da Interface** | Interface "monolítica/gorda" (`IContratoBancarioGordo`) que mistura operações díspares. | Múltiplas interfaces granulares (`ITransacionavel`, `IAutenticavelBiometria`, `IEmissorComprovante`, `IFinanciavel`). |
 | **Integridade de Código** | Classes simples lançam `NotImplementedException` para métodos que não têm capacidade de executar. | Classes implementam apenas os contratos estritamente suportados por seu domínio e hardware. |
 | **Acoplamento** | Alto. Alterar a assinatura de um método na interface monolítica quebra classes não relacionadas no sistema. | Mínimo. Mudanças em `IFinanciavel` afetam apenas os fluxos de crédito, sem impactar o PDV de pagamentos. |
+
+---
+
+## 5. D - Princípio da Inversão de Dependência (Dependency Inversion Principle - DIP)
+
+> **Definição:** *Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações. Abstrações não devem depender de detalhes; detalhes devem depender de abstrações.*
+
+### 🤖 Ilustração Visual do Conceito
+
+![Ilustração do Princípio da Inversão de Dependência (DIP)](./img/conceito-dip.jpg)
+
+### 📊 Comparativo Técnico
+
+| Aspecto | Modo Incorreto (`Dip.Incorreto`) | Modo Correto (`Dip.Correto`) |
+| :--- | :--- | :--- |
+| **Direção do Acoplamento** | Alto nível amarrado a ferramentas concretas (`new RepositorioSqlServer()`, `new ServicoSmtp()`). | Alto nível orquestra contratos (`IRepositorioPagamento`, `IServicoMensageria`). |
+| **Testabilidade** | Impossível realizar testes de unidade sem banco SQL ou SMTP ativo. | Testabilidade isolada via Mocks (`Moq`, `NSubstitute`). |
+| **Substituição de Infraestrutura** | Trocar SQL Server por Oracle ou RabbitMQ por AWS SQS exige editar o domínio de negócio. | O domínio permanece intacto; altera-se apenas a classe de infraestrutura registrada no container de DI. |

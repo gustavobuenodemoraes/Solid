@@ -1,5 +1,4 @@
-﻿using Isp.Correto.Abstracoes;
-using Isp.Correto.Modelos;
+﻿using Isp.Correto.Modelos;
 using Isp.Correto.Servicos;
 using Incorreto = Isp.Incorreto;
 
