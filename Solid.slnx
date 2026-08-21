@@ -1,4 +1,13 @@
 <Solution>
-  <Project Path="Ocp/Ocp.csproj" Id="7e176235-d2f7-46b7-8dc3-c3b68e593e19" />
-  <Project Path="Srp/Srp.csproj" />
+  <Folder Name="/1 - Single Responsibility Principle/">
+    <Project Path="Srp/Srp.csproj" />
+  </Folder>
+  <Folder Name="/2 - Open Closed Principle/">
+    <Project Path="Ocp/Ocp.csproj" Id="7e176235-d2f7-46b7-8dc3-c3b68e593e19" />
+  </Folder>
+  <Folder Name="/3 - Liskov Substitution Principle/">
+    <Project Path="Lsp/Lsp.csproj" Id="4d01952e-f5b2-46d5-b08d-919ff2718c3d" />
+  </Folder>
+  <Folder Name="/4 - Interface Segregation Principle/" />
+  <Folder Name="/5 - Dependency Inversion Principle/" />
 </Solution>
