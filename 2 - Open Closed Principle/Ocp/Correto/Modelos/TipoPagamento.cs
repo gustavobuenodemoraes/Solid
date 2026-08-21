@@ -4,6 +4,7 @@ public enum TipoPagamento
 {
     Pix,
     CartaoCredito,
+    CartaoDebito,
     Boleto,
     Cripto // Nova opção criada sem tocar no processador
 }

@@ -22,6 +22,7 @@ var estrategias = new List<IEstrategiaPagamento>
 {
     new PagamentoPix(),
     new PagamentoCartaoCredito(),
+    new PagamentoCartaoDebito(),
     new PagamentoBoleto(),
     new PagamentoCripto() // Nova funcionalidade estendida sem alterar o processador
 };

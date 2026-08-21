@@ -39,6 +39,7 @@ Repositório prático para estudo, consulta e demonstração técnica dos princ�
 
 ![Ilustração do Princípio da Substituição de Liskov (LSP)](./img/conceito-lsp.jpg)
 
+![Ilustração do Princípio da Substituição de Liskov com herança](img/estrutura_contratos_lsp.jpg)
 ### 📊 Comparativo Técnico
 
 | Aspecto | Modo Incorreto (`Lsp.Incorreto`) | Modo Correto (`Lsp.Correto`) |
@@ -57,6 +58,10 @@ Repositório prático para estudo, consulta e demonstração técnica dos princ�
 
 ![Ilustração do Princípio da Segregação de Interfaces (ISP)](./img/conceito-isp.jpg)
 
+![Ilustração do Princípio da Segregação de Interfaces usando maquina de cartão](img/conceito_isp_maquininha.jpg)
+
+![Ilustração do Princípio da Segregação de Interfaces usando maquina de ATM](img/conceito_isp_atm.jpg) 
+
 ### 📊 Comparativo Técnico
 
 | Aspecto | Modo Incorreto (`Isp.Incorreto`) | Modo Correto (`Isp.Correto`) |
@@ -74,6 +79,8 @@ Repositório prático para estudo, consulta e demonstração técnica dos princ�
 ### 🤖 Ilustração Visual do Conceito
 
 ![Ilustração do Princípio da Inversão de Dependência (DIP)](./img/conceito-dip.jpg)
+
+![Ilustração do Princípio da Inversão de Dependência (DIP) simplificado](img/conceito-dip-simplificado.jpg)
 
 ### 📊 Comparativo Técnico
 
