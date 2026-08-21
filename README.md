@@ -48,3 +48,19 @@ Repositório prático para estudo, consulta e demonstração técnica dos princ�
 | **Princípio Relacionado** | Violação de herança gera código frágil e obriga o uso de `if (conta is ContaPoupancaSalario)` (quebrando também o OCP). | Segregação de interfaces e composição evitam herança cega. |
 
 ---
+
+## 4. I - Princípio da Segregação de Interfaces (Interface Segregation Principle - ISP)
+
+> **Definição:** *Clientes não devem ser forçados a depender de interfaces ou métodos que não utilizam.*
+
+### 🤖 Ilustração Visual do Conceito
+
+![Ilustração do Princípio da Segregação de Interfaces (ISP)](./img/conceito-isp.jpg)
+
+### 📊 Comparativo Técnico
+
+| Aspecto | Modo Incorreto (`Isp.Incorreto`) | Modo Correto (`Isp.Correto`) |
+| :--- | :--- | :--- |
+| **Granularidade da Interface** | Interface "monolítica/gorda" (`IContratoBancarioGordo`) que mistura operações díspares. | Múltiplas interfaces granulares (`ITransacionavel`, `IAutenticavelBiometria`, `IEmissorComprovante`, `IFinanciavel`). |
+| **Integridade de Código** | Classes simples lançam `NotImplementedException` para métodos que não têm capacidade de executar. | Classes implementam apenas os contratos estritamente suportados por seu domínio e hardware. |
+| **Acoplamento** | Alto. Alterar a assinatura de um método na interface monolítica quebra classes não relacionadas no sistema. | Mínimo. Mudanças em `IFinanciavel` afetam apenas os fluxos de crédito, sem impactar o PDV de pagamentos. |
